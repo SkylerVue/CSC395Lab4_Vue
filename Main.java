@@ -15,7 +15,7 @@ public class Main {
 
         // The observers
         StockWatcher stockWatcher = new StockWatcher(stockMarket);
-        Newsfeed newsFeed = new Newsfeed(theNews,weatherStation,stockMarket);
+        NewsFeed newsFeed = new NewsFeed(theNews,weatherStation,stockMarket);
         Database database = new Database(stockMarket);
 
         // Subjects implement Runnable. Make Thread to run in.
@@ -28,7 +28,7 @@ public class Main {
         weatherThread.start();
         newsThread.start();
         
-        newsFeed.start();   // Subject thread that controls the scrolling headline
+        newsfeed.start();   // Subject thread that controls the scrolling headline
 
         while (true) {
         }
