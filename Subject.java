@@ -1,6 +1,6 @@
 import java.util.*;
 
-public abstract class Subject {
+public abstract class Subject extends Thread{
   
       private ArrayList<Observer> observers = new ArrayList<>();
   
