@@ -9,6 +9,8 @@ public class NewsDisplay extends JComponent {
     private int height;
 
     String toDraw = "HERE IT IS";
+    String toDrawS = "HERE Stocks";
+    String toDrawD = "HERE data";
 
     public NewsDisplay(int w, int h) {
         width = w;
@@ -44,11 +46,11 @@ public class NewsDisplay extends JComponent {
     }
     
     public void stockRedraw(String toDisplay) {
-        String toDrawS = toDisplay;
+        toDrawS = toDisplay;
         repaint();
     }
     public void dataRedraw(String toDisplay) {
-        String toDrawD = toDisplay;
+         toDrawD = toDisplay;
         repaint();
     }
     public void newsRedraw(String toDisplay) {
@@ -70,6 +72,9 @@ public class NewsDisplay extends JComponent {
         g2d.setRenderingHints(rh);
 
         g2d.drawString(toDraw, 40, 40);
+        g2d.drawString(toDrawD, 40, 60);
+        g2d.drawString(toDrawS, 40, 80);
+
         
     }
 

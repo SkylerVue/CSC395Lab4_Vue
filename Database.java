@@ -4,7 +4,7 @@ public class Database implements Observer {
     NewsDisplay dataDisplay = new NewsDisplay(600, 600);
 
 
-    public Database(StockMarket data){
+    public Database(StockMarket database){
        
     }
 
