@@ -5,7 +5,7 @@ public class NewsAP extends Subject {
         for (Observer obs : observers()) {
             NewsData nData = new NewsData();
             nData.headlineGenerator();
-            obs.update(nData);
+            obs.update(new NewsData(nData));//sends a copy of the data
         }
 
     }

@@ -2,11 +2,10 @@ public class StockMarket extends Subject {
 
     @Override
     public void notifyObservers() {
-        // TODO Auto-generated method stub
         StockData genStockData = new StockData();
         for (Observer obs : observers()) {
             genStockData.stockGenerator();
-            obs.update(genStockData);
+            obs.update(new StockData(genStockData));//sends a copy of the data
         }
 
     }

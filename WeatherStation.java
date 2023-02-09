@@ -3,7 +3,7 @@ public class WeatherStation extends Subject {
          for (Observer obs : observers()) {
             WeatherData wData = new WeatherData();
             wData.weatherGenerator();
-            obs.update(wData);
+            obs.update(new WeatherData(wData));//sends a copy of the data
          }
     }
     public void run(){

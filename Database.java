@@ -1,12 +1,15 @@
 public class Database implements Observer {
-    StockData stocks;
+    private StockData stockData;
     StockMarket stockMarket;
+    NewsDisplay dataDisplay = new NewsDisplay(600, 600);
+
 
     public Database(StockMarket data){
        
     }
 
     private void updateStocks(StockData data) {
+        dataDisplay.stockRedraw(stockData.toString());
     }
 
     public void update(Object newData) {
