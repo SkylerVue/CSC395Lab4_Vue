@@ -1,15 +1,15 @@
-public class StockWatcher implements Observer{
+public class StockWatcher extends Thread implements Observer{
     private StockData stockData;
 
     NewsDisplay stockDisplay = new NewsDisplay(600, 600);
 
     public StockWatcher(StockMarket stockMarket) {
     }
-
     public void updateStocks(StockData data){
-        stockDisplay.stockRedraw(stockData.toString());
+        stockDisplay.repaint(stockData.toString());
 
     }
+    
 
     @Override
     public void update(Object newData) {

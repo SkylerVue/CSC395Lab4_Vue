@@ -16,15 +16,18 @@ public class NewsFeed extends Thread implements Observer {
         } else {
             // throw an exception is the appropriate thing to do here
         }
+        newsDisplay.repaint( newsData.toString());
     }
     private void updateHeadline(NewsData data) {
-        newsDisplay.stockRedraw(newsData.toString());
+        newsData.getHeadline();
+        newsDisplay.repaint(newsData.toString());
     }
     private void updateWeather(WeatherData data) {
-        newsDisplay.stockRedraw(newsData.toString());
+
+        newsDisplay.repaint(newsData.toString());
     }
     private void updateStocks(StockData data) {
-        newsDisplay.stockRedraw(stockData.toString());
+        newsDisplay.repaint(stockData.toString());
     }
     
 }

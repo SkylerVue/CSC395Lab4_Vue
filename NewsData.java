@@ -1,3 +1,4 @@
+import java.awt.Rectangle;
 import java.util.Random;
 
 public class NewsData {

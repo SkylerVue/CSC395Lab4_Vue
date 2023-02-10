@@ -28,7 +28,10 @@ public class Main {
         weatherThread.start();
         newsThread.start();
         
-        newsFeed.start();   // Subject thread that controls the scrolling headline
+        newsFeed.start();
+        stockWatcher.start();
+        database.start();
+           // Subject thread that controls the scrolling headline
 
         while (true) {
         }

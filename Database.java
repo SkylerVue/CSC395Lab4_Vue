@@ -1,4 +1,4 @@
-public class Database implements Observer {
+public class Database extends Thread implements Observer {
     private StockData stockData;
     StockMarket stockMarket;
     NewsDisplay dataDisplay = new NewsDisplay(600, 600);
@@ -9,7 +9,7 @@ public class Database implements Observer {
     }
 
     private void updateStocks(StockData data) {
-        dataDisplay.stockRedraw(stockData.toString());
+        dataDisplay.repaint(stockData.toString());
     }
 
     public void update(Object newData) {
