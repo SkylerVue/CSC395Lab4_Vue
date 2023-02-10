@@ -1,5 +1,5 @@
 public class NewsFeed extends Thread implements Observer {
-    NewsDisplay newsDisplay = new NewsDisplay(600, 600);
+    NewsDisplay newsDisplay = new NewsDisplay(600, 600, "News Feed");
     private StockData stockData;
     private NewsData newsData;
    

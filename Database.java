@@ -1,7 +1,7 @@
 public class Database extends Thread implements Observer {
     private StockData stockData;
     StockMarket stockMarket;
-    NewsDisplay dataDisplay = new NewsDisplay(600, 600);
+    NewsDisplay dataDisplay = new NewsDisplay(600, 600, "Data Display");
 
 
     public Database(StockMarket database){

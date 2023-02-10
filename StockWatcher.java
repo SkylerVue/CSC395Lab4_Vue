@@ -1,7 +1,7 @@
 public class StockWatcher extends Thread implements Observer{
     private StockData stockData;
 
-    NewsDisplay stockDisplay = new NewsDisplay(600, 600);
+    NewsDisplay stockDisplay = new NewsDisplay(600, 600, "Stocks");
 
     public StockWatcher(StockMarket stockMarket) {
     }

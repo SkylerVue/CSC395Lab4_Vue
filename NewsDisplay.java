@@ -12,12 +12,12 @@ public class NewsDisplay extends JComponent {
     String toDrawS = "HERE Stocks";
     String toDrawD = "HERE data";
 
-    public NewsDisplay(int w, int h) {
+    public NewsDisplay(int w, int h, String title) {
         width = w;
         height = h;
         JFrame f = new JFrame();
         f.setSize(w + 20, h + 20);
-        f.setTitle("Weather Station");
+        f.setTitle(title);
         f.add(this);
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.setVisible(true);
